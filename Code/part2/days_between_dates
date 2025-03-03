@@ -1,0 +1,9 @@
+from datetime import datetime
+
+def days_between_dates(date1, date2, format="%Y-%m-%d"):
+    d1 = datetime.strptime(date1, format)
+    d2 = datetime.strptime(date2, format)
+    return abs((d2 - d1).days)
+
+# 示例调用
+print(days_between_dates("2024-01-01", "2025-03-02"))
